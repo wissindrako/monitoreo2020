@@ -1,0 +1,163 @@
+/**-----------------------------------CLASES PERSONALIZADAS ---------------------------------------------------------*/
+
+/* define height and width of scrollable area. Add 16px to width for scrollbar          */
+div.tableContainer {
+	clear: both;
+	/* border: 1px solid #963; */
+	height: 585px;
+  overflow: auto;
+  /* width: 100% */
+	/* width: 900px */
+}
+
+/* Reset overflow value to hidden for all non-IE browsers. */
+html>body div.tableContainer {
+  overflow: hidden;
+  /* width: 100% */
+	/* width: 900px */
+}
+
+/* define width of table. IE browsers only                 */
+div.tableContainer table {
+  float: left;
+  /* width: 100% */
+	/* width: 740px */
+}
+
+/* define width of table. Add 16px to width for scrollbar.           */
+/* All other non-IE browsers.                                        */
+html>body div.tableContainer table {
+  /* width: 756px */
+  /* width: 100% */
+}
+
+/* set table header to a fixed position. WinIE 6.x only                                       */
+/* In WinIE 6.x, any element with a position property set to relative and is a child of       */
+/* an element that has an overflow property set, the relative value translates into fixed.    */
+/* Ex: parent element DIV with a class of tableContainer has an overflow property set to auto */
+
+thead.fixedHeader tr {
+	position: relative;
+}
+
+/* set THEAD element to have block level attributes. All other non-IE browsers            */
+/* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+
+/* make the TH elements pretty */
+thead.fixedHeader th {
+	/* background: #C96;
+	border-left: 1px solid #EB8;
+	border-right: 1px solid #B74;
+	border-top: 1px solid #EB8;
+	font-weight: normal;
+	padding: 4px 3px; */
+	text-align: left
+}
+
+html>body tbody.scrollContent {
+	display: block;
+	height: 582px;
+	overflow: auto;
+	width: 100%
+}
+
+html>body thead.fixedHeader {
+	display: table;
+	overflow: auto;
+	width: 100%
+}
+
+/* make TD elements pretty. Provide alternating classes for striping the table */
+/* http://www.alistapart.com/articles/zebratables/                             */
+tbody.scrollContent td, tbody.scrollContent tr.normalRow td {
+	background: #FFF;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+  padding: 2px 3px 3px 4px;
+  width: 8%
+}
+
+
+
+tbody.scrollContent tr.alternateRow td {
+	background: #EEE;
+	border-bottom: none;
+	border-left: none;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #DDD;
+	padding: 2px 3px 3px 4px
+}
+
+.aprobado{
+
+background-color: #E9FCFA;
+border: 1px dashed #006600;
+padding: 8px;
+margin-bottom: 10px;
+}
+
+.rechazado{
+
+background-color: #FFEDED;
+border: 1px dashed #FA206A;
+padding: 8px;
+margin-bottom: 10px;
+}
+
+.div_modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #002640;
+  opacity: .80;
+  -webkit-opacity: .8;
+  -moz-opacity: .8;
+  filter: alpha(opacity=80);
+  z-index: 1040;
+}
+
+
+.div_contenido {
+  background-color: #002640;
+  box-shadow: 0 0 20px 0 #222;
+  -webkit-box-shadow: 0 0 20px 0 #222;
+  -moz-box-shadow: 0 0 20px 0 #222;
+  display: none;
+  height: auto;
+  margin-left: 2%;
+  margin-right: 2%;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  position: absolute;
+  top: 6%;
+  width: auto;
+  min-height: 90%;
+  z-index: 1050;
+}
+
+
+.box-gris{
+background-color:#ecf0f5 !important;
+}
+
+.box-white{
+background-color:#fff !important;
+}
+
+.form-group {
+ 
+  margin-bottom: 1px;
+}
+
+.form-control {
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #b1cada;
+  margin-bottom: 5px;
+}

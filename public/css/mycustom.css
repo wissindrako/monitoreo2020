@@ -1,0 +1,174 @@
+body.mybody {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+    line-height: 30px;
+    /* text-align: center; */
+    background-color: #138541;
+
+}
+strong { 
+	font-weight: 500; 
+}
+a, a:hover, a:focus {
+	
+	text-decoration: none;
+    /*-o-transition: all .3s; 
+    -moz-transition: all .3s; 
+    -webkit-transition: all .3s; 
+    -ms-transition: all .3s; 
+    transition: all .3s; NI IDEA PARA QUE SERVIRAN ESTAS LINEAS*/
+}
+
+.table_striped_cool>tbody>tr:nth-child(odd)>td,
+.table_striped_cool>tbody>tr:nth-child(odd)>th {
+	background-color: #00b7fd24;
+}
+
+/* Contenidos y Formulario*/
+.logo{
+height: 60px;
+width: auto;
+
+}
+
+.mytop-content {
+    padding: 0px 0 100px 0;
+}
+.mytop-content .mydescription {
+    margin: 20px 0 10px 0;
+}
+.mytop-content .mydescription p { 
+    opacity: 0.8; 
+}
+.myform-cont {
+    margin-top: 35px;
+}
+.myform-top {
+    overflow: hidden;
+    padding: 0 25px 15px 25px;
+    background: #fff;
+    -moz-border-radius: 10px 10px 0 0; 
+    -webkit-border-radius: 10px 10px 0 0; 
+    border-radius: 10px 10px 0 0;
+    text-align: left;
+}
+.myform-top-left { 
+    float: left;
+    width: 75%;
+    padding-top: 25px;
+}
+.myform-top-left p { 
+    opacity: 0.8; 
+}
+.myform-top-right {
+    float: right;
+    width: 25%;
+    padding-top: 25px;
+    font-size: 66px;
+    text-align: right;
+    opacity: 0.3;
+}
+.myform_top_right_img {
+    float: right;
+    width: 25%;
+    padding-top: 25px;
+    font-size: 66px;
+    text-align: right;
+}
+.myform-bottom {
+    padding: 5px 25px 30px 25px;
+    background: #f16625;
+    -moz-border-radius: 0 0 10px 10px; 
+    -webkit-border-radius: 0 0 10px 10px; 
+    border-radius: 0 0 10px 10px;
+}
+.myform-bottom .mybtn {
+    width: 100%;
+}
+input.form-control{
+    vertical-align: middle;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+textarea:focus, 
+textarea.form-control:focus {
+    background: #fff;
+    border: 2px solid #95e62c;
+}
+button.mybtn {
+    height: 50px;
+    /* background: rgb(0, 0, 0); */
+    background: #138541;
+    border: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 40px;
+    color: #fff;
+    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+button.mybtn:hover, button.mybtn:active { 
+    opacity: 0.6; 
+    color: rgb(0, 0, 0); 
+}
+button.mybtn:focus { 
+    opacity: 0.6;
+    color: #fff; 
+    background: #692817; 
+}
+
+/*LOGIN REDES SOCIALES*/
+
+.mysocial-login {
+    margin-top: 35px;
+}
+.mysocial-login-buttons {
+    margin-top: 25px;
+}
+.mybtn-social {
+    display: inline-block;
+    height: 50px;
+    margin: 5px;
+    padding: 15px 20px 0 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+    color: #fff;
+    -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px; 
+    border-radius: 4px;
+}
+.mybtn-social:hover, .mybtn-social:focus, 
+.mybtn-social:active, .mybtn-social:active:focus { 
+    outline: 0;
+    opacity: 0.6; 
+    background: rgba(0, 0, 0, 0.3); 
+    color: #fff; 
+}
+
+/* Media queries */
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media (max-width: 767px) {
+    
+    .mytop-content { padding: 60px 0 110px 0; }
+
+}
+
+@media (max-width: 415px) {
+    h1, h2 { font-size: 32px; }
+}
