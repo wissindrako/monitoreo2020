@@ -8,9 +8,9 @@
 @section('main-content')
 <section  id="contenido_principal">
 
-<div class="box box-primary">
+<div class="box box-success">
 		<div class="box-header">
-				<h3 class="box-title">Listado de Votacion por Circunscripción</h3>	
+				<h3 class="">Listado de Votacion por Circunscripción</h3>	
 				{{-- <h4 class="text-black" >NOMBRE: <b>{{$persona->nombre}} {{$persona->paterno}} {{$persona->materno}}</b></h4 class="text-black" >
 				<h4 class="text-black" >CEDULA: <b>{{$persona->cedula_identidad}} {{$persona->complemento_cedula}} {{$persona->expedido}}</b></h4 class="text-black" > --}}
 				<h4 class="text-black" >CIRCUNSCRIPCION: <b>{{$recinto->circunscripcion}}</b></h4 class="text-black">
@@ -23,29 +23,29 @@
 		  <table id="tabla_votacion_general" class="table table-hover table-striped table-bordered header-fixed">
 			<thead>
 				<tr>
-					<th style="background-color:#111111; text-align:center; color:white;"></th>
+					<th style="background-color:#f58e20; text-align:center; color:white;"></th>
 					
-					<th style="background-color:#111111; text-align:center; color:white;" colspan="3">Datos del Recinto</th>
-					<th style="background-color:#111111; text-align:center; color:white;" colspan="4">Votos Presidenciales</th>
-					<th style="background-color:#111111; text-align:center; color:white;" colspan="4">Votos Uninominales</th>
-					<th style="background-color:#111111; text-align:center; color:white;" colspan="2">Datos del Responsable</th>
+					<th style="background-color:#f58e20; text-align:center; color:white;" colspan="3">Datos del Recinto</th>
+					<th style="background-color:#f58e20; text-align:center; color:white;" colspan="4">Votos Presidenciales</th>
+					<th style="background-color:#f58e20; text-align:center; color:white;" colspan="4">Votos Uninominales</th>
+					<th style="background-color:#f58e20; text-align:center; color:white;" colspan="2">Datos del Responsable</th>
 				</tr>
 				<tr>
-					<th style="background-color:#3c8dbc; text-align:center; color:white;">#</th>
+					<th style="background-color:#00a65a; text-align:center; color:white;">#</th>
 
-					<th style="background-color:#3c8dbc; text-align:center; color:white;">Distrito</th>
-					<th style="background-color:#3c8dbc; text-align:center; color:white;">Recinto</th>
-					<th style="background-color:#3c8dbc; text-align:center; color:white;">Mesas</th>
-					<th style="background-color:#3c8dbc; text-align:center; color:white;">Registrados</th>
-					<th style="background-color:#3c8dbc; text-align:center; color:white;">Esperados</th>
-					<th style="background-color:#3c8dbc; text-align:center; color:white;">Total</th>
-					<th style="background-color:#3c8dbc; text-align:center; color:white;">Estado</th>
-					<th style="background-color:#3c8dbc; text-align:center; color:white;">Registrados</th>
-					<th style="background-color:#3c8dbc; text-align:center; color:white;">Esperados</th>
-					<th style="background-color:#3c8dbc; text-align:center; color:white;">Total</th>
-					<th style="background-color:#3c8dbc; text-align:center; color:white;">Estado</th>
-					<th style="background-color:#3c8dbc; text-align:center; color:white;">Nombre</th>
-					<th style="background-color:#3c8dbc; text-align:center; color:white;">Contacto</th>
+					<th style="background-color:#00a65a; text-align:center; color:white;">Distrito</th>
+					<th style="background-color:#00a65a; text-align:center; color:white;">Recinto</th>
+					<th style="background-color:#00a65a; text-align:center; color:white;">Mesas</th>
+					<th style="background-color:#00a65a; text-align:center; color:white;">Registrados</th>
+					<th style="background-color:#00a65a; text-align:center; color:white;">Esperados</th>
+					<th style="background-color:#00a65a; text-align:center; color:white;">Total</th>
+					<th style="background-color:#00a65a; text-align:center; color:white;">Estado</th>
+					<th style="background-color:#00a65a; text-align:center; color:white;">Registrados</th>
+					<th style="background-color:#00a65a; text-align:center; color:white;">Esperados</th>
+					<th style="background-color:#00a65a; text-align:center; color:white;">Total</th>
+					<th style="background-color:#00a65a; text-align:center; color:white;">Estado</th>
+					<th style="background-color:#00a65a; text-align:center; color:white;">Nombre</th>
+					<th style="background-color:#00a65a; text-align:center; color:white;">Contacto</th>
 				</tr>
 				{{-- <th>Estado</th>
 				<th></th> --}}

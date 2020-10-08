@@ -15,13 +15,13 @@
 				<!-- /.box-header -->
 				{{-- {{dd($detalle_mesas)}} --}}
 				<div class="box-body table-responsive no-padding">
-				  <table id="tabla_votacion_general" class="table table-hover table-striped table-bordered">
+				  <table id="tabla_votacion_general" class="table table-hover table_striped_uninominales table-bordered">
 					<thead>
 						<tr>			
-							<th width="15%" style="background-color:#3c8dbc; text-align:center; color:white" class="col-sm-2">Partido</th>
-							<th width="10%" style="background-color:#3c8dbc; text-align:center; color:white" class="col-sm-2">Cantidad Votos</th>
-							<th width="5%" style="background-color:#3c8dbc; text-align:center; color:white" class="col-sm-1"></th>
-							<th width="70%" style="background-color:#3c8dbc; text-align:center; color:white" class="col-sm-7">Foto del Acta</th>
+							<th width="15%" style="background-color:#f58e20; text-align:center; color:white" class="col-sm-2">Partido</th>
+							<th width="10%" style="background-color:#f58e20; text-align:center; color:white" class="col-sm-2">Cantidad Votos</th>
+							<th width="5%" style="background-color:#f58e20; text-align:center; color:white" class="col-sm-1"></th>
+							<th width="70%" style="background-color:#f58e20; text-align:center; color:white" class="col-sm-7">Foto del Acta</th>
 						</tr>
 						{{-- <th>Estado</th>
 						<th></th> --}}
@@ -34,7 +34,8 @@
 							<div class="user-block">
 								<img class="img-circle img-bordered-sm" src={{ url($p['logo']) }} alt="user image">
 									<span class="username">
-										<a href="#">{{ $p['sigla'] }}</a>
+										{{-- <a href="#">{{ $p['sigla'] }}</a> --}}
+										{{ $p['sigla'] }}
 									</span>
 								{{-- <span class="description">{{ $p['nombre_partido'] }}</span> --}}
 							</div>
@@ -43,7 +44,7 @@
 							{{-- <h2><b>{{$p['validos']}}</b></h2> --}}
 							<input type="hidden" name="" id="id_votos_uninominales" value="{{$p['id_votos_uninominales']}}">
 							<input type="hidden" name="" id="id_partido" value="{{$p['id_partido']}}">
-							<input style='font-size: 35px; color:black; height: 50px; font-weight:bold; text-align:center' type="number" name="input_voto" id="input_voto" placeholder="" class="input_voto form-control" value="{{$p['validos']}}" pattern="[0-9]{6,9}" onkeydown="return event.keyCode !== 69"  required/>
+							<input style='font-size: 35px; color:black; height: 50px; font-weight:bold; text-align:center' type="number" min="0" name="input_voto" id="input_voto" placeholder="" class="input_voto form-control" value="{{$p['validos']}}" pattern="[0-9]{6,9}" onkeydown="return event.keyCode !== 69"  required/>
 							
 						</td>
 						<td>
@@ -63,7 +64,8 @@
 							<div class="user-block">
 								<img class="img-circle img-bordered-sm" src={{ url('/img/blanco.png') }} alt="user image">
 									<span class="username">
-										<a href="#">Blancos</a>
+										{{-- <a href="#">Blancos</a> --}}
+										Blancos
 									</span>
 								{{-- <span class="description">{{ $p['nombre_partido'] }}</span> --}}
 							</div>
@@ -72,7 +74,7 @@
 						<td style="text-align:center;">
 							<input type="hidden" name="" id="blanco_nulo" value="BLANCO">
 							<input type="hidden" name="" id="id_votos_uninominales_r" value="">
-							<input style='font-size: 35px; color:black; height: 50px; font-weight:bold; text-align:center' type="number" name="input_voto_bn" id="input_voto_bn" placeholder="" class="input_voto form-control" value="" pattern="[0-9]{6,9}" onkeydown="return event.keyCode !== 69"  required/>
+							<input style='font-size: 35px; color:black; height: 50px; font-weight:bold; text-align:center' type="number" min="0" name="input_voto_bn" id="input_voto_bn" placeholder="" class="input_voto form-control" value="" pattern="[0-9]{6,9}" onkeydown="return event.keyCode !== 69"  required/>
 						</td>
 						<td>
 							<button type="button" class="btn_blanco_nulo btn btn-default btn-lg"><i class="fa fa-fw fa-save"></i></button>
@@ -81,7 +83,7 @@
 						<td style="text-align:center;">
 							<input type="hidden" name="" id="blanco_nulo" value="BLANCO">
 							<input type="hidden" name="" id="id_votos_uninominales_r" value="{{$votos_uninominales_r->id_votos_uninominales_r}}">
-							<input style='font-size: 35px; color:black; height: 50px; font-weight:bold; text-align:center' type="number" name="input_voto_bn" id="input_voto_bn" placeholder="" class="input_voto form-control" value="{{$votos_uninominales_r->blancos}}" pattern="[0-9]{6,9}" onkeydown="return event.keyCode !== 69"  required/>
+							<input style='font-size: 35px; color:black; height: 50px; font-weight:bold; text-align:center' type="number" min="0" name="input_voto_bn" id="input_voto_bn" placeholder="" class="input_voto form-control" value="{{$votos_uninominales_r->blancos}}" pattern="[0-9]{6,9}" onkeydown="return event.keyCode !== 69"  required/>
 						</td>
 						<td>
 							<button type="button" class="btn_blanco_nulo btn btn-default btn-lg"><i class="fa fa-fw fa-save"></i></button>
@@ -94,7 +96,8 @@
 						<div class="user-block">
 							<img class="img-circle img-bordered-sm" src={{ url('/img/nulo.png') }} alt="user image">
 								<span class="username">
-									<a href="#">Nulos</a>
+									{{-- <a href="#">Nulos</a> --}}
+									Nulos
 								</span>
 							{{-- <span class="description">{{ $p['nombre_partido'] }}</span> --}}
 						</div>
@@ -103,7 +106,7 @@
 					<td style="text-align:center;">
 						<input type="hidden" name="" id="blanco_nulo" value="NULO">
 						<input type="hidden" name="" id="id_votos_uninominales_r" value="">
-						<input style='font-size: 35px; color:black; height: 50px; font-weight:bold; text-align:center' type="number" name="input_voto_bn" id="input_voto_bn" placeholder="" class="input_voto form-control" value="" pattern="[0-9]{6,9}" onkeydown="return event.keyCode !== 69"  required/>
+						<input style='font-size: 35px; color:black; height: 50px; font-weight:bold; text-align:center' type="number" min="0" name="input_voto_bn" id="input_voto_bn" placeholder="" class="input_voto form-control" value="" pattern="[0-9]{6,9}" onkeydown="return event.keyCode !== 69"  required/>
 					</td>
 					<td>
 						<button type="button" class="btn_blanco_nulo btn btn-default btn-lg"><i class="fa fa-fw fa-save"></i></button>
@@ -112,7 +115,7 @@
 					<td style="text-align:center;">
 						<input type="hidden" name="" id="blanco_nulo" value="NULO">
 						<input type="hidden" name="" id="id_votos_uninominales_r" value="{{$votos_uninominales_r->id_votos_uninominales_r}}">
-						<input style='font-size: 35px; color:black; height: 50px; font-weight:bold; text-align:center' type="number" name="input_voto_bn" id="input_voto_bn" placeholder="" class="input_voto form-control" value="{{$votos_uninominales_r->nulos}}" pattern="[0-9]{6,9}" onkeydown="return event.keyCode !== 69"  required/>
+						<input style='font-size: 35px; color:black; height: 50px; font-weight:bold; text-align:center' type="number" min="0" name="input_voto_bn" id="input_voto_bn" placeholder="" class="input_voto form-control" value="{{$votos_uninominales_r->nulos}}" pattern="[0-9]{6,9}" onkeydown="return event.keyCode !== 69"  required/>
 					</td>
 					<td>
 						<button type="button" class="btn_blanco_nulo btn btn-default btn-lg"><i class="fa fa-fw fa-save"></i></button>

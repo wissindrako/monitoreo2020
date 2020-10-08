@@ -595,6 +595,7 @@ a:focus {
     margin-left: 50px !important;
     z-index: 840;
   }
+
   .sidebar-mini.sidebar-collapse .main-sidebar {
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
@@ -1129,7 +1130,8 @@ a:focus {
 }
 .navbar-nav > .user-menu > .dropdown-menu > .user-footer {
   background-color: #f9f9f9;
-  padding: 10px;
+  /* padding: 0px; */
+  border-top: 1px solid white;
 }
 .navbar-nav > .user-menu > .dropdown-menu > .user-footer:before,
 .navbar-nav > .user-menu > .dropdown-menu > .user-footer:after {

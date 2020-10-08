@@ -296,10 +296,10 @@ class PersonasController extends Controller
                         $usuario->activo=1;
                 
                         if($request->input("rol_slug") == ''){
-                            //rol delegado del MAS
+                            //rol delegado del Partido
                             return 'rol';
                         }elseif($request->input("rol_slug") == 'militante'){
-                            //rol delegado del MAS
+                            //rol delegado del Partido
                             if ($usuario->save()) {
 
                                 $rol = \DB::table('roles')
@@ -970,7 +970,7 @@ class PersonasController extends Controller
                 $persona->id_recinto = $request->input("recinto");
 
                 if($request->input("rol_slug") == 'militante'){
-                    //rol delegado del MAS
+                    //rol delegado del Partido
                     $persona->id_rol = $rol->id;
                     if ($persona->save()) {
                         return view("mensajes.msj_enviado")->with("msj","enviado_editar_persona");

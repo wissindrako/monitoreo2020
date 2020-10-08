@@ -29,7 +29,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="skin-naranja-light sidebar-mini">
+<body class="skin-abstract sidebar-mini">
 
 <div style="display: none;" id="cargador_empresa" align="center">
         <br>
@@ -37,7 +37,7 @@ desired effect
 
          <img src="{{ url('/img/cargando.gif') }}" align="middle" alt="cargador"> &nbsp;<label style="color:#ABB6BA">Realizando tarea solicitada ...</label>
 
-          <br>
+         <br>
          <hr style="color:#003" width="50%">
          <br>
 </div>

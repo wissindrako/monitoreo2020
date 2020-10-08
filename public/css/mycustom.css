@@ -23,7 +23,16 @@ a, a:hover, a:focus {
 
 .table_striped_cool>tbody>tr:nth-child(odd)>td,
 .table_striped_cool>tbody>tr:nth-child(odd)>th {
-	background-color: #00b7fd24;
+	background-color: #0bec964d;
+}
+
+.table_striped_presidenciales>tbody>tr:nth-child(odd)>td,
+.table_striped_presidenciales>tbody>tr:nth-child(odd)>th {
+	background-color: #0bcaec65;
+}
+.table_striped_uninominales>tbody>tr:nth-child(odd)>td,
+.table_striped_uninominales>tbody>tr:nth-child(odd)>th {
+	background-color: #f51ebf5e;
 }
 
 /* Contenidos y Formulario*/

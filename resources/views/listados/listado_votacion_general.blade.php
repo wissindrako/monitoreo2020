@@ -8,18 +8,18 @@
 @section('main-content')
 <section  id="contenido_principal">
 
-<div class="box box-primary">
+<div class="box box-success">
 		<div class="box-header">
-				<h3 class="box-title">Listado General de Votacion</h3>	
+				<h3 class="">Cómputo de Votos</h3>	
 		</div>
 		<!-- /.box-header -->
 		{{-- {{dd($personas)}} --}}
 		<div class="box-body table-responsive no-padding">
 		  <table id="tabla_votacion_general" class="table table-hover table-striped table-bordered">
 			<thead>
-				<th style="font-size: 20px; background-color:#3c8dbc; text-align:center; color: #fff;">Presidenciales</th>
+				<th style="font-size: 20px; background-color:#f58e20; text-align:center; color: #fff;">Presidenciales</th>
 				{{-- <th style="font-size: 14px;">Presidenciales</th> --}}
-				<th style="font-size: 20px;background-color:#3c8dbc; text-align:center; color: #fff;">Uninominales</th>
+				<th style="font-size: 20px;background-color:#f58e20; text-align:center; color: #fff;">Uninominales</th>
 				{{-- <th>Recinto</th> --}}
 				{{-- <th>Mesa</th>
 				<th>Presidenciales</th>

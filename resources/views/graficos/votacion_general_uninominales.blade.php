@@ -22,12 +22,12 @@
 	</div> --}}
 
 	{{-- INICIO CIRCUNSCRIPCION 10 --}}
-	<div class="box box-primary">
+	<div class="box box-warning">
 		<a href="javascript:void(0);" onclick="refrescar_votos();">
-			<div class="box-header with-border" style="background-color:#3c8dbc; text-align:center">
+			<div class="box-header with-border" style="background-color:#f58e20; text-align:center">
 			<h3 class="box-title" style="color:white">Votos Uninominales Circunscripción 10</h3>
 			<div class="box-tools pull-right">
-				<button type="button" class="btn btn-box-tool bg-black"><i class="fa fa-refresh text-aqua" id="btn_refresh"></i></button>
+				<button type="button" class="btn btn-box-tool bg-black"><i class="fa fa-refresh text-green" id="btn_refresh"></i></button>
 			</div>
 			</div>
 		</a>
@@ -77,9 +77,9 @@
 	{{-- FIN CIRCUNSCRIPCION 10 --}}
 
 	{{-- INICIO CIRCUNSCIPCION 11 --}}
-	<div class="box box-primary">
+	<div class="box box-warning">
 		<a href="javascript:void(0);" onclick="refrescar_votos();">
-			<div class="box-header with-border" style="background-color:#3c8dbc; text-align:center">
+			<div class="box-header with-border" style="background-color:#f58e20; text-align:center">
 				<h3 class="box-title" style="color:white">Votos Uninominales Circunscripción 11</h3>
 				<div class="box-tools pull-right">
 					<button type="button" class="btn btn-box-tool bg-black"><i class="fa fa-refresh text-aqua" id="btn_refresh"></i></button>
@@ -132,9 +132,9 @@
 	{{-- FIN CIRCUNSCRIPCION 11 --}}
 
 	{{-- INICIO CIRCUNSCIPCION 12 --}}
-	<div class="box box-primary">
+	<div class="box box-warning">
 		<a href="javascript:void(0);" onclick="refrescar_votos();">
-			<div class="box-header with-border" style="background-color:#3c8dbc; text-align:center">
+			<div class="box-header with-border" style="background-color:#f58e20; text-align:center">
 				<h3 class="box-title" style="color:white">Votos Uninominales Circunscripción 12</h3>
 				<div class="box-tools pull-right">
 					<button type="button" class="btn btn-box-tool bg-black"><i class="fa fa-refresh text-aqua" id="btn_refresh"></i></button>
@@ -187,9 +187,9 @@
 	{{-- FIN CIRCUNSCIPCION 12 --}}
 	
 	{{-- INICIO CIRCUNSCIPCION 13 --}}
-	<div class="box box-primary">
+	<div class="box box-warning">
 		<a href="javascript:void(0);" onclick="refrescar_votos();">
-			<div class="box-header with-border" style="background-color:#3c8dbc; text-align:center">
+			<div class="box-header with-border" style="background-color:#f58e20; text-align:center">
 				<h3 class="box-title" style="color:white">Votos Uninominales Circunscripción 13</h3>
 			</div>
 		</a>

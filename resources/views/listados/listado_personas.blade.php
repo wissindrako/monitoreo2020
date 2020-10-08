@@ -8,7 +8,7 @@
 @section('main-content')
 <section  id="contenido_principal">
 
-<div class="box box-primary">
+<div class="box box-success">
 		<div class="box-header">
 				<h3 class="box-title">Listado de Personas</h3>
 				<input type="hidden" id="rol_usuario" value="{{ $rol->slug }}">
@@ -17,26 +17,17 @@
 		</div>
 		<!-- /.box-header -->
 		
-		<div class="box-body table-responsive no-padding">
+		<div class="box-body table-responsive">
 		  <table id="tabla_personas" class="table table-hover table-striped table-bordered">
 			<thead>
 				<th>Circ.</th>	
 				<th>Distrito</th>
-				{{-- <th>Distrito OEP</th> --}}
 				<th>Recinto</th>
 				<th>Nombre</th>
-				{{-- <th>Paterno</th>
-				<th>Materno</th> --}}
+
 				<th>Cedula</th>
-				{{-- <th>Comp.</th> --}}
 				<th>Nacimiento</th>
 				<th>Contacto</th>
-				{{-- <th>Telefono - Celular</th>
-				<th>Telefono Ref.</th> --}}
-				{{-- <th>Dirección</th>
-				<th>Compromiso</th>
-				<th>Fecha de Registro</th>
-				<th>Activo</th> --}}
 
 				<th>Origen</th>
 				<th>Sub Origen</th>
@@ -47,56 +38,8 @@
 				<th>Acción</th>
 				
 			</thead>
-			{{-- <tbody> --}}
 				Completo   
-			{{-- <tr>
-				<th>ID</th> --}}
-				{{-- <th>Nombre Completo</th>
-				<th>Cedula de Identidad</th>
-				<th>Fecha nacimiento</th>
-				<th>Telf. Cel.</th>
-				<th>Telf. Ref.</th>
-				<th>Dirección</th>
-				<th>Compromiso</th>
-				<th>Fecha de Registro</th>
-				<th>Activo</th>
-				<th>Recinto</th>
-				<th>Origen</th>
-				<th>Sub Origen</th>
-				<th>Rol</th>
-				<th colspan="2">Acción</th> --}}
-			{{-- </tr> --}}
-			{{-- // ->where('personal.idarea', $persona->idarea)
-			// ->where('vacaciones.id_estado', '=' ,1) --}}
 
-			{{-- @foreach ($personas as $p)
-				<tr>
-					<td>{{$p->id_persona}}</td>
-					<td>{{$p->nombre.' '.$p->paterno.' '.$p->materno}}</td>
-					<td>{{$p->cedula_identidad}} {{$p->complemento_cedula}} {{$p->expedido}}</td>
-					<td>{{f_formato($p->fecha_nacimiento)}}</td>
-					<td>{{$p->telefono_celular}}</td>
-					<td>{{$p->telefono_referencia}}</td>
-					<td>{{$p->direccion}}</td>
-					<td>{{$p->grado_compromiso}}</td>
-					<td>{{f_formato($p->fecha_registro)}}</td>
-					<td>{{$p->activo}}</td>
-					<td>{{$p->nombre_recinto}}</td>
-					<td>{{$p->origen}}</td>
-					<td>{{$p->sub_origen}}</td>
-					<td>{{$p->nombre_rol}}</td>
-
-					@if ($p->activo == 1)
-					<td><button type="button" class="btn btn-success btn-xs" onclick="verinfo_persona({{ $p->id_persona }}, 1)" ><i class="fa fa-pencil-square-o"></i></button></td>
-					<td><button type="button" class="btn btn-danger btn-xs" onclick="verinfo_persona({{ $p->id_persona }}, 2)" ><i class="fa fa-fw fa-user-times"></i></button></td>
-					@else
-					<td><button disabled type="button" class="btn btn-success btn-xs" ><i class="fa fa-pencil-square-o"></i></button></td>
-					<td><button disabled type="button" class="btn btn-danger btn-xs"  ><i class="fa fa-fw fa-user-times"></i></button></td>
-					@endif
-				</tr>
-			@endforeach --}}
-
-			{{-- </tbody> --}}
 		</table>
 			@if (count($personas) == 0)
 			<div class="box box-primary col-xs-12">
@@ -204,7 +147,7 @@ function activar_tabla_prueba() {
     // DataTable
 	var table = $('#tabla_personas').DataTable({
 		
-		scrollY:"600px",
+		scrollY:"50px",
 		scrollX: true,
 		dom: 'Bfrtip',
         processing: true,

@@ -219,16 +219,6 @@ class VotacionesController extends Controller
       }
     }
 
-    
-
-    // if($a->save())
-    // {
-    //     return 'ok' ;
-    // }
-    // else
-    // {
-    //     return 'failed' ;
-    // }
   }
 
   public function llenado_emergencia_uninominales(Request $request){

@@ -7,7 +7,7 @@
         <span class="logo-mini"><b><i class='fa fa-square'></i></b></span>
         <div class="row centered logo-lg">
             <span><b>MonitoreoElectoral</b></span>
-            {{-- <img src="{{asset('/img/encuestas_logo_blanco_final.png')}}" style="width:160px;height:40px;" class="centered" alt="User Image"/> --}}
+            {{-- <img src="{{asset('/img/movimientonaranja.png')}}" style="width:160px;height:40px;" class="centered" alt="User Image"/> --}}
         </div>
         <!-- logo for regular state and mobile devices -->
         {{-- <span class="logo-lg"><b>J</b>aqi</span> --}}
@@ -191,7 +191,7 @@
                             <img src="{{asset('/img/on_off.png')}}" class="user-image" alt="User Image"/>
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
                             {{-- <span class="hidden-xs">{{ Auth::user()->name }}</span> --}}
-                            <label class="text-black "> Salir</label>
+                            <span class="text-black" style="font-size: 16px; font-weight: bold;">Salir</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
@@ -232,7 +232,7 @@
 
                                    <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();"  class="btn btn-primary btn-flat btn-block"  >
+                                                document.getElementById('logout-form').submit();"  class="btn bg-orange btn-flat btn-block"  >
                                             <label class="text-black "><i class="fa fa-power-off text-black"></i> Salir</label>
                                         </a>
 

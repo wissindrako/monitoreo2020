@@ -36,7 +36,7 @@
 
 
                     @role('militante')
-                    <p><i class="fa fa-caret-right text-yellow"></i> Delegado del MAS</p>
+                    <p><i class="fa fa-caret-right text-yellow"></i> Delegado del Partido</p>
                     @endrole
                     @role('conductor')
                     <p><i class="fa fa-caret-right text-yellow"></i> Conductor</p>
@@ -79,7 +79,7 @@
             <li class="treeview">
                 <a href="#"><i class='fa fa-gear'></i> <span>Configuración</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                        <li><a href="{{ url('listado_usuarios') }}">Roles</a></li>
+                        <li><a href="{{ url('listado_usuarios') }}">Usuarios</a></li>
                     {{-- <li><a href="{{ url('listado_empresas') }}">Usuarios</a></li> --}}
                 </ul>
             </li>
@@ -95,11 +95,10 @@
                     {{-- <li><a href="{{ url('listado_empresas') }}">Usuarios</a></li> --}}
                     @endcan
 
-                    @can('registrar_transporte')
+                    {{-- @can('registrar_transporte')
                     <li><a href="{{ url('form_agregar_transporte') }}">Transporte</a></li>
-                    <!--li><a href="{{ url('listado_personas') }}">Casas de Campaña</a></li>
-                    <li><a href="{{ url('listado_personas') }}">Candidatos</a></li-->
-                    @endcan
+
+                    @endcan --}}
                 </ul>
             </li>
             @endcan
@@ -111,17 +110,12 @@
                     @can('listar_personas')
                     <li><a href="{{ url('listado_personas') }}">Personas</a></li>
                     @endcan
-                    @can('listar_transporte')
+                    {{-- @can('listar_transporte')
                     <li><a href="{{ url('listado_transportes') }}">Transporte</a></li>
-                    @endcan
+                    @endcan --}}
                     {{-- @can('listar_distritos')
                     <li><a href="{{ url('listado_distritos_responsables') }}">Responsables de Distrito</a></li>
                     @endcan --}}
-
-
-                    {{-- <li><a href="{{ url('listado_votacion_general') }}">Votación General</a></li> --}}
-                    <!--<li><a href="{{ url('listado_personas') }}">Casas de Campaña</a></li>
-                    <li><a href="{{ url('listado_personas') }}">Candidatos</a></li>-->
                 </ul>
             </li>
             @endcan
@@ -151,7 +145,7 @@
             <li class="treeview"><a href="{{ url('listado_votacion_circunscripcion') }}"><i class='fa fa-check-square-o'></i> Control de Distritos</a></li>
             @endcan
 
-            @can('ver_lista_asistencia')
+            {{-- @can('ver_lista_asistencia')
             <li class="treeview"><a href="{{ url('form_listas_de_asistencia') }}"><i class='fa fa-check-square-o'></i> Control de Asistencia</a></li>
             @endcan
 
@@ -168,18 +162,18 @@
                     @endcan
                 </ul>
             </li>
-            @endcan
+            @endcan --}}
 
             @can('como_llegar_a_mi_recinto')
             <li class="treeview">
                 <a href="{{ url('form_ver_recinto') }}"><i class='fa fa-map-o'></i> <span>Como llegar a mi Recinto</span> </a>
             </li>
             @endcan
-            @can('registrar_asistencia')
+            {{-- @can('registrar_asistencia')
             <li class="treeview">
                 <a href="{{ url('form_registrar_asistencia') }}"><i class='fa fa-calendar-check-o'></i> <span>Registrar mi asistencia</span> </a>
             </li>
-            @endcan
+            @endcan --}}
             @can('registrar_votos')
             <li class="treeview">
                 <a href="{{ url('form_votar_seleccionar_mesa') }}"><i class='fa fa-list-ol'></i> <span>Registrar votos</span> </a>
@@ -206,7 +200,7 @@
             <li class="treeview">
                 <a href="#"><i class='fa fa-edit'></i> <span>Reportes</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('listado_votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Estado votación</span></a></li>
+                    <li><a href="{{ url('listado_votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Cómputo de Votos</span></a></li>
                     <li><a href="{{ url('votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Votación Presidenciales</span></a></li> 
                     <li><a href="{{ url('porcentaje_votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Porcentaje Presidenciales</span></a></li> 
                     {{-- <li><a href="{{ url('form_resumen_global_por_distrito') }}"><i class='fa fa-bar-chart'></i> <span>Resumen Global </span></a></li>  --}}
@@ -214,13 +208,12 @@
                 </ul>
             </li>
             @endrole
-
+{{-- 
             @can('exportar_asignacion_delegados_excel')
-            {{-- <li class="treeview"><a href="{{ url('delegados_mesa') }}"><i class='fa fa-file-excel-o text-green'></i> Asignación de Delegados</a></li> --}}
-            <li class="treeview"><a href="{{ url('form_asignacion_delegado_excel') }}"><i class='fa fa-file-excel-o text-green'></i> Asignación de Delegados</a></li>
-            @endcan
+                <li class="treeview"><a href="{{ url('form_asignacion_delegado_excel') }}"><i class='fa fa-file-excel-o text-green'></i> Asignación de Delegados</a></li>
+            @endcan --}}
 
-            @role('ejecutivo')
+            {{-- @role('ejecutivo')
             <li class="treeview">
                 <a href="#"><i class='fa fa-file-pdf-o'></i> <span>Reportes</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
@@ -228,7 +221,7 @@
                     <li><a href="{{ url('home') }}">Usuario - Mesa</a></li>
                 </ul>
             </li>
-            @endrole
+            @endrole --}}
 
             {{-- 
             <li class="treeview">

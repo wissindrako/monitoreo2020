@@ -23,7 +23,7 @@
 
                 <div class="myform-bottom">
                   
-                <form action="{{ url('editar_asignacion_persona') }}"  method="post" id="f_enviar_editar_persona" class="formentrada" >
+                <form action="{{ url('editar_asignacion_persona') }}"  method="post" id="f_enviar_editar_persona_asignacion" class="formentrada" >
                   <input type="hidden" name="_token" value="{{ csrf_token() }}">
                   <input type="hidden" name="id_persona" value="{{ $persona->id_persona }}">
 {{-- 

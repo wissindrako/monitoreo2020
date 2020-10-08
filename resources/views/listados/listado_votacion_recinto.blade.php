@@ -23,25 +23,25 @@
 		  <table id="tabla_votacion_general" class="table table-hover table-striped table-bordered">
 			<thead>
 					<tr>
-						<th style="background-color:#111111; text-align:center; color:white" colspan="1"></th>
-						<th style="background-color:#111111; text-align:center; color:white" colspan="4">Votos Presidenciales</th>
-						<th style="background-color:#111111; text-align:center; color:white" colspan="4">Votos Uninominales</th>
-						<th style="background-color:#111111; text-align:center; color:white" colspan="2">Datos del Responsable de Mesa</th>
+						<th style="background-color:#f58e20; text-align:center; color:white" colspan="1"></th>
+						<th style="background-color:#f58e20; text-align:center; color:white" colspan="4">Votos Presidenciales</th>
+						<th style="background-color:#f58e20; text-align:center; color:white" colspan="4">Votos Uninominales</th>
+						<th style="background-color:#f58e20; text-align:center; color:white" colspan="2">Datos del Responsable de Mesa</th>
 					</tr>
 					<tr>				
 
 						{{-- <th># Recinto</th> --}}
-						<th style="background-color:#3c8dbc; text-align:center; color:white">Mesa</th>
-						<th style="background-color:#3c8dbc; text-align:center; color:white">Registrados</th>
-						<th style="background-color:#3c8dbc; text-align:center; color:white">Esperados</th>
-						<th style="background-color:#3c8dbc; text-align:center; color:white">Total</th>
-						<th style="background-color:#3c8dbc; text-align:center; color:white">Estado</th>
-						<th style="background-color:#3c8dbc; text-align:center; color:white">Registrados</th>
-						<th style="background-color:#3c8dbc; text-align:center; color:white">Esperados</th>
-						<th style="background-color:#3c8dbc; text-align:center; color:white">Total</th>
-						<th style="background-color:#3c8dbc; text-align:center; color:white">Estado</th>
-						<th style="background-color:#3c8dbc; text-align:center; color:white">Nombre</th>
-						<th style="background-color:#3c8dbc; text-align:center; color:white">Contacto</th>
+						<th style="background-color:#00a65a; text-align:center; color:white">Mesa</th>
+						<th style="background-color:#00a65a; text-align:center; color:white">Registrados</th>
+						<th style="background-color:#00a65a; text-align:center; color:white">Esperados</th>
+						<th style="background-color:#00a65a; text-align:center; color:white">Total</th>
+						<th style="background-color:#00a65a; text-align:center; color:white">Estado</th>
+						<th style="background-color:#00a65a; text-align:center; color:white">Registrados</th>
+						<th style="background-color:#00a65a; text-align:center; color:white">Esperados</th>
+						<th style="background-color:#00a65a; text-align:center; color:white">Total</th>
+						<th style="background-color:#00a65a; text-align:center; color:white">Estado</th>
+						<th style="background-color:#00a65a; text-align:center; color:white">Nombre</th>
+						<th style="background-color:#00a65a; text-align:center; color:white">Contacto</th>
 					</tr>
 				{{-- <th>Estado</th>
 				<th></th> --}}
@@ -52,7 +52,7 @@
 				<tr>
 
 				{{-- <td>{{$mesa->id_recinto}}</td> --}}
-				<td style="text-align:center;">{{$mesa->codigo_mesas_oep}}</td>
+				<td style="text-align:center; border: 2px solid #1bd3f388;">{{$mesa->codigo_mesas_oep}}</td>
 				{{-- {{dd($votos_presidenciales)}} --}}
 				@php
 					$votos_pre = 0;
@@ -76,15 +76,15 @@
 					@endphp
 					@endif
 				@endforeach
-				<td style="text-align:right;">{{$votos_pre + $b_n}}</td> {{-- Registrados --}}
-				<td style="text-align:right;">{{($cantidad_partidos+1) - ($votos_pre + $b_n)}}</td> {{-- Esperados --}}
-				<td style="text-align:right;">{{($cantidad_partidos+1)}}</td> {{-- Total --}}
+				<td style="text-align:right;  border: 2px solid #1bd3f388;">{{$votos_pre + $b_n}}</td> {{-- Registrados --}}
+				<td style="text-align:right;  border: 2px solid #1bd3f388;">{{($cantidad_partidos+1) - ($votos_pre + $b_n)}}</td> {{-- Esperados --}}
+				<td style="text-align:right;  border: 2px solid #1bd3f388;">{{($cantidad_partidos+1)}}</td> {{-- Total --}}
 				@if ($votos_pre + $b_n < $cantidad_partidos+1)
-				<td style="text-align:center;"><a href="javascript:void(0);" onclick="verinfo_mesas({{ $mesa->id_mesa }}, 1)">
+				<td style="text-align:center;  border: 2px solid #1bd3f388;"><a href="javascript:void(0);" onclick="verinfo_mesas({{ $mesa->id_mesa }}, 1)">
 					<span class="badge bg-red">Incompleto</span></a>
 				</td>	
 				@else
-				<td style="text-align:center;"><a href="javascript:void(0);" onclick="verinfo_mesas({{ $mesa->id_mesa }}, 1)">
+				<td style="text-align:center;  border: 2px solid #1bd3f388;"><a href="javascript:void(0);" onclick="verinfo_mesas({{ $mesa->id_mesa }}, 1)">
 					<span class="badge bg-green">&nbsp;Completo&nbsp;&nbsp;</span>
 				</td>	
 				@endif
@@ -105,16 +105,16 @@
 					@endif
 				@endforeach
 				{{-- {{$cantidad_partidos}} --}}
-				<td style="text-align:right;">{{$votos_uni + $uni_b_n}}</td> {{-- Registrados --}}
-				<td style="text-align:right;">{{($cantidad_partidos+1) - ($votos_uni + $uni_b_n)}}</td> {{-- Esperados --}}
-				<td style="text-align:right;">{{($cantidad_partidos+1)}}</td> {{-- Total --}}
+				<td style="text-align:right; border: 2px solid #f053c988;">{{$votos_uni + $uni_b_n}}</td> {{-- Registrados --}}
+				<td style="text-align:right; border: 2px solid #f053c988;">{{($cantidad_partidos+1) - ($votos_uni + $uni_b_n)}}</td> {{-- Esperados --}}
+				<td style="text-align:right; border: 2px solid #f053c988;">{{($cantidad_partidos+1)}}</td> {{-- Total --}}
 
 				@if ($votos_uni + $uni_b_n < $cantidad_partidos+1)
-				<td style="text-align:center;"><a href="javascript:void(0);" onclick="verinfo_mesas({{ $mesa->id_mesa }}, 2)">
+				<td style="text-align:center; border: 2px solid #f053c988;"><a href="javascript:void(0);" onclick="verinfo_mesas({{ $mesa->id_mesa }}, 2)">
 					<span class="badge bg-red">Incompleto</span></a>
 				</td>
 				@else
-				<td style="text-align:center;"><a href="javascript:void(0);" onclick="verinfo_mesas({{ $mesa->id_mesa }}, 2)">
+				<td style="text-align:center; border: 2px solid #f053c988;"><a href="javascript:void(0);" onclick="verinfo_mesas({{ $mesa->id_mesa }}, 2)">
 					<span class="badge bg-green">&nbsp;Completo&nbsp;&nbsp;</span>
 				</td>
 				@endif

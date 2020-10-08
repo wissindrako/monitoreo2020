@@ -1,7 +1,7 @@
 <section  id="content" style="background-color: #002640;">
 
 
-<div class="box box-primary">
+<div class="box box-warning">
         <div class="box-header" style="text-align:center">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="cerrar_modal"><span aria-hidden="true">&times;</span></button>
         <h3 class=""><b>Llenado de Mesas - Votos Presidenciales</b></h3>
@@ -13,24 +13,25 @@
         {{-- {{dd($votos_presidenciales_r)}} --}}
 
 		<div class="box-body table-responsive no-padding">
-		  <table id="tabla_personas" class="table table-hover table_striped_cool table-bordered">
+		  <table id="tabla_personas" class="table table-hover table_striped_presidenciales table-bordered">
             {{-- <table class="table"> --}}
                     <thead>
                         {{-- <tr style="background-color:#111111; text-align:center; color:white"> --}}
                         <tr>
-                        <th style='font-size: 16px; text-align:center; color:#3c8dbc; font-family: "Source Sans Pro"; vertical-align: middle;'>                                    
+                        <th style='font-size: 16px; text-align:center; font-family: "Source Sans Pro"; vertical-align: middle;'>                                    
                             #
                         </th>
-                        <th style='font-size: 16px; text-align:center; color:#3c8dbc; font-family: "Source Sans Pro"; vertical-align: middle;'>
+                        <th style='font-size: 16px; text-align:center; font-family: "Source Sans Pro"; vertical-align: middle;'>
                             MESA
                         </th>
                         @foreach ($partidos as $partido)
                         {{-- <th style="text-align:center" width="9%">{{$partido->sigla}}</th> --}}
                         <th style="text-align:left" width="9%">					
-                            <div class="user-block">
+                            <div class="user-block"  style="vertical-align: middle">
                                 <img class="img-circle img-bordered-sm" src={{url($partido->logo)}} alt="user image">
                                     <span class="username">
-                                        <a href="#">{{$partido->sigla}}</a>
+                                        {{-- <a href="#">{{$partido->sigla}}</a> --}}
+                                        {{$partido->sigla}}
                                     </span>
                                 {{-- <span class="description">{{ $p['nombre_partido'] }}</span> --}}
                             </div>
@@ -40,7 +41,8 @@
                             <div class="user-block">
                                 <img class="img-circle img-bordered-sm" src={{url('/img/blanco.png')}} alt="user image">
                                     <span class="username">
-                                        <a href="#">Blancos</a>
+                                        {{-- <a href="#">Blancos</a> --}}
+                                        Blancos
                                     </span>
                                 {{-- <span class="description">{{ $p['nombre_partido'] }}</span> --}}
                             </div>
@@ -49,7 +51,8 @@
                             <div class="user-block">
                                 <img class="img-circle img-bordered-sm" src={{url('/img/nulo.png')}} alt="user image">
                                     <span class="username">
-                                        <a href="#">Nulos</a>
+                                        {{-- <a href="#">Nulos</a> --}}
+                                        Nulos
                                     </span>
                                 {{-- <span class="description">{{ $p['nombre_partido'] }}</span> --}}
                             </div>
@@ -66,19 +69,20 @@
                         @endphp
                         @if ($num % 7 == 0)
                         <tr>
-                            <th style='font-size: 16px; text-align:center; color:#3c8dbc; font-family: "Source Sans Pro"; vertical-align: middle;'>                                    
+                            <th style='font-size: 16px; text-align:center; font-family: "Source Sans Pro"; vertical-align: middle;'>                                    
                                 #
                             </th>
-                            <th style='font-size: 16px; text-align:center; color:#3c8dbc; font-family: "Source Sans Pro"; vertical-align: middle;'>
+                            <th style='font-size: 16px; text-align:center; font-family: "Source Sans Pro"; vertical-align: middle;'>
                                 MESA
                             </th>
                             @foreach ($partidos as $partido)
                             {{-- <th style="text-align:center" width="9%">{{$partido->sigla}}</th> --}}
-                            <th style="text-align:left" width="9%">					
+                            <th style="text-align:left" width="10%">					
                                 <div class="user-block">
                                     <img class="img-circle img-bordered-sm" src={{url($partido->logo)}} alt="user image">
                                         <span class="username">
-                                            <a href="#">{{$partido->sigla}}</a>
+                                            {{-- <a href="#">{{$partido->sigla}}</a> --}}
+                                            {{$partido->sigla}}
                                         </span>
                                     {{-- <span class="description">{{ $p['nombre_partido'] }}</span> --}}
                                 </div>
@@ -88,7 +92,8 @@
                                 <div class="user-block">
                                     <img class="img-circle img-bordered-sm" src={{url('/img/blanco.png')}} alt="user image">
                                         <span class="username">
-                                            <a href="#">Blancos</a>
+                                            {{-- <a href="#">Blancos</a> --}}
+                                            Blancos
                                         </span>
                                     {{-- <span class="description">{{ $p['nombre_partido'] }}</span> --}}
                                 </div>
@@ -97,12 +102,13 @@
                                 <div class="user-block">
                                     <img class="img-circle img-bordered-sm" src={{url('/img/nulo.png')}} alt="user image">
                                         <span class="username">
-                                            <a href="#">Nulos</a>
+                                            {{-- <a href="#">Nulos</a> --}}
+                                            Nulos
                                         </span>
                                     {{-- <span class="description">{{ $p['nombre_partido'] }}</span> --}}
                                 </div>
                             </th>
-                            <th style="text-align:center" width="3%"></th>
+                            <th style="text-align:center"></th>
                         </tr>
                         @endif
                         <tr>

@@ -874,6 +874,7 @@ $(document).on("submit",".formentrada",function(e){
   if(quien=="f_asignar_usuario_mesa"){  var varurl=$(this).attr("action");  var div_resul="div_notificacion_sol";}
   if(quien=="f_enviar_agregar_persona"){  var varurl=$(this).attr("action");  var div_resul="div_notificacion_sol";}
   if(quien=="f_enviar_editar_persona"){  var varurl=$(this).attr("action");  var div_resul="div_notificacion_sol";}
+  if(quien=="f_enviar_editar_persona_asignacion"){  var varurl=$(this).attr("action");  var div_resul="div_notificacion_sol";}
   if(quien=="f_baja_persona"){  var varurl=$(this).attr("action");  var div_resul="div_notificacion_sol";}
 
   if(quien=="f_enviar_gastronomia"){  var varurl=$(this).attr("action");  var div_resul="div_notificacion_sol";}
@@ -919,7 +920,7 @@ $(document).on("submit",".formentrada",function(e){
         else if(resul == 'failed'){
           $("#"+div_resul+"").html('ha ocurrido un error, revise su conexion e intentelo nuevamente');
         }
-      }else if(quien=="f_enviar_agregar_persona" || quien=="f_enviar_editar_persona"){
+      }else if(quien=="f_enviar_agregar_persona" || quien=="f_enviar_editar_persona" || quien=="f_enviar_editar_persona_asignacion"){
         if (resul == 'failed') {
           alertify.success('Ocurrió un error, revise su conexión');
         }else if(resul == 'apellido'){

@@ -865,7 +865,7 @@ class MesasController extends Controller
         ->first();
 
         if($request->input("rol_slug") == 'militante'){
-            //rol delegado del MAS
+            //rol delegado del Partido
             return 'militante';
         }elseif ($request->input("rol_slug") == 'conductor') {
             // rol Conductor
@@ -1233,7 +1233,7 @@ class MesasController extends Controller
         ->first();
 
         $usuario->revokeRole($rol->id);
-        //$usuario->assignRole(15); //Delegado del Mas
+        //$usuario->assignRole(15); //Delegado del Partido
 
         if ($rol->slug == 'militante') {
             # code...

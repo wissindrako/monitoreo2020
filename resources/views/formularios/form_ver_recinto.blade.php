@@ -15,7 +15,7 @@
         <div class="container">
             
             <div class="row">
-                <div class="box box-primary">
+                <div class="box box-success">
                     <div>
                             {{-- <iframe src="https://goo.gl/maps/huir9fbedLs&output=embed" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe> --}}
                     </div>
@@ -36,7 +36,7 @@
                                 <!-- Widget: user widget style 1 -->
                                 <div class="box box-widget widget-user">
                                     <!-- Add the bg color to the header using any of the bg-* classes -->
-                                    <div class="widget-user-header bg-primary">
+                                    <div class="widget-user-header bg-green">
                                     <h3 class="widget-user-username">{{$persona->nombre}} {{$persona->paterno}} {{$persona->materno}} </h3>
                                     <h5 class="widget-user-desc">{{$rol->description}}</h5>
                                     </div>
@@ -89,7 +89,7 @@
                             </div>
                             <div class="col-md-12">
                                 @if (!empty($recinto))
-                                <a href="{{$recinto->geolocalizacion}}" target="_blank" class="btn btn-primary btn-lg btn-block">
+                                <a href="{{$recinto->geolocalizacion}}" target="_blank" class="btn btn-warning btn-lg btn-block">
                                         <i class="fa fa-map-marker"></i> Ver
                                     </a>
                                 @else

@@ -9,24 +9,25 @@
                 </div>
         
                 <div class="box-body table-responsive no-padding">
-                  <table id="tabla_personas" class="table table-hover table_striped_cool table-bordered">
+                  <table id="tabla_personas" class="table table-hover table_striped_uninominales table-bordered">
                     {{-- <table class="table"> --}}
                         <thead>
                             {{-- <tr style="background-color:#111111; text-align:center; color:white"> --}}
                             <tr>
-                                <th style='font-size: 16px; text-align:center; color:#3c8dbc; font-family: "Source Sans Pro"; vertical-align: middle;'>                                    
+                                <th style='font-size: 16px; text-align:center; font-family: "Source Sans Pro"; vertical-align: middle;'>                                    
                                     #
                                 </th>
-                                <th style='font-size: 16px; text-align:center; color:#3c8dbc; font-family: "Source Sans Pro"; vertical-align: middle;'>
+                                <th style='font-size: 16px; text-align:center; font-family: "Source Sans Pro"; vertical-align: middle;'>
                                     MESA
                                 </th>
                             @foreach ($partidos as $partido)
                             {{-- <th style="text-align:center" width="9%">{{$partido->sigla}}</th> --}}
-                            <th style="text-align:left" width="9%">					
+                            <th style="text-align:left" width="10%">					
                                 <div class="user-block">
                                     <img class="img-circle img-bordered-sm" src={{url($partido->logo)}} alt="user image">
                                         <span class="username">
-                                            <a href="#">{{$partido->sigla}}</a>
+                                            {{-- <a href="#">{{$partido->sigla}}</a> --}}
+                                            {{$partido->sigla}}
                                         </span>
                                     {{-- <span class="description">{{ $p['nombre_partido'] }}</span> --}}
                                 </div>
@@ -36,7 +37,8 @@
                                 <div class="user-block">
                                     <img class="img-circle img-bordered-sm" src={{url('/img/blanco.png')}} alt="user image">
                                         <span class="username">
-                                            <a href="#">Blancos</a>
+                                            {{-- <a href="#">Blancos</a> --}}
+                                            Blancos
                                         </span>
                                     {{-- <span class="description">{{ $p['nombre_partido'] }}</span> --}}
                                 </div>
@@ -45,13 +47,13 @@
                                 <div class="user-block">
                                     <img class="img-circle img-bordered-sm" src={{url('/img/nulo.png')}} alt="user image">
                                         <span class="username">
-                                            <a href="#">Nulos</a>
+                                            {{-- <a href="#">Nulos</a> --}}
+                                            Nulos
                                         </span>
                                     {{-- <span class="description">{{ $p['nombre_partido'] }}</span> --}}
                                 </div>
                             </th>
-                            <th style="text-align:center" width="1%"></th>
-                            <th style="text-align:center" width="1%"></th>
+                            <th style="text-align:center" width="4%"></th>
                             </tr>
                         </thead>
                             <tbody>
@@ -62,19 +64,20 @@
                                 @endphp
                                 @if ($num % 7 == 0)
                                 <tr>
-                                    <th style='font-size: 16px; text-align:center; color:#3c8dbc; font-family: "Source Sans Pro"; vertical-align: middle;'>                                    
+                                    <th style='font-size: 16px; text-align:center; font-family: "Source Sans Pro"; vertical-align: middle;'>                                    
                                         #
                                     </th>
-                                    <th style='font-size: 16px; text-align:center; color:#3c8dbc; font-family: "Source Sans Pro"; vertical-align: middle;'>
+                                    <th style='font-size: 16px; text-align:center; font-family: "Source Sans Pro"; vertical-align: middle;'>
                                         MESA
                                     </th>
                                     @foreach ($partidos as $partido)
                                     {{-- <th style="text-align:center" width="9%">{{$partido->sigla}}</th> --}}
-                                    <th style="text-align:left" width="9%">					
+                                    <th style="text-align:left" width="10%">					
                                         <div class="user-block">
                                             <img class="img-circle img-bordered-sm" src={{url($partido->logo)}} alt="user image">
                                                 <span class="username">
-                                                    <a href="#">{{$partido->sigla}}</a>
+                                                    {{-- <a href="#">{{$partido->sigla}}</a> --}}
+                                                    {{$partido->sigla}}
                                                 </span>
                                             {{-- <span class="description">{{ $p['nombre_partido'] }}</span> --}}
                                         </div>
@@ -84,7 +87,8 @@
                                         <div class="user-block">
                                             <img class="img-circle img-bordered-sm" src={{url('/img/blanco.png')}} alt="user image">
                                                 <span class="username">
-                                                    <a href="#">Blancos</a>
+                                                    {{-- <a href="#">Blancos</a> --}}
+                                                    Blancos
                                                 </span>
                                             {{-- <span class="description">{{ $p['nombre_partido'] }}</span> --}}
                                         </div>
@@ -93,12 +97,13 @@
                                         <div class="user-block">
                                             <img class="img-circle img-bordered-sm" src={{url('/img/nulo.png')}} alt="user image">
                                                 <span class="username">
-                                                    <a href="#">Nulos</a>
+                                                    {{-- <a href="#">Nulos</a> --}}
+                                                    Nulos
                                                 </span>
                                             {{-- <span class="description">{{ $p['nombre_partido'] }}</span> --}}
                                         </div>
                                     </th>
-                                    <th style="text-align:center" width="3%"></th>
+                                    <th style="text-align:center" width="4%"></th>
                                 </tr>
                                 @endif
                                 <tr>
@@ -194,7 +199,7 @@
                 $.ajax({
                     // alert('sdaf');
                     type:'POST',
-                    url:"form_llenado_emergencia_uninominales", // sending the request to the same page we're on right now
+                    url:"llenado_emergencia_uninominales", // sending the request to the same page we're on right now
                     data:{
                         'id_mesa':id_mesa,
                         'partido_1':partido_1,

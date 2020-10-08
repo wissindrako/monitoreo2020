@@ -21,9 +21,10 @@
 
 			<div style="text-align:center">
 
-				<h2><b>Elecciones 2019</b></h2>
+				<h2><b>Elecciones 2020</b></h2>
+				<br>
 				{{-- <h3><b>Administración </b></h3> --}}
-				<img src="{{asset('img/logopersona.png')}}" style="width:350x;height:250px;" class="centered"/>
+				<img src="{{asset('img/partidos.png')}}" style="width:100%;height:350px;" class="resonsive"/>
 			</div>
 		</div>
 	</div>
