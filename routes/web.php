@@ -73,6 +73,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('buscar_transportes', 'TransportesController@buscar_transportes');
     Route::get('revisar_transportes_asistencia', 'TransportesController@revisar_transportes_asistencia');
 
+    Route::get('import_contacto', 'Excel\ImportPersonaController@index')->name('import_contacto');
+    Route::post('import_contacto', 'Excel\ImportPersonaController@import')->name('guardar_import_contacto');
+
     Route::get('form_agregar_persona', 'PersonasController@form_agregar_persona');
     Route::post('agregar_persona', 'PersonasController@agregar_persona');
 

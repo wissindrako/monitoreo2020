@@ -10,10 +10,13 @@
 
 <div class="box box-success">
 		<div class="box-header">
-				<h3 class="box-title">Listado de Personas</h3>
-				<input type="hidden" id="rol_usuario" value="{{ $rol->slug }}">
-
-			
+            <h3 class="box-title">Listado de Personas</h3>
+            <input type="hidden" id="rol_usuario" value="{{ $rol->slug }}">
+            <div class="pull-right box-tools">
+            <a href="{{route('import_contacto')}}" class="btn btn-warning">
+                <i class="fa fa-fw fa-file-excel-o text-green"></i> Importar
+            </a>
+              </div>
 		</div>
 		<!-- /.box-header -->
 		

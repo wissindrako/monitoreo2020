@@ -24,4 +24,8 @@ class Persona extends Model
     {
         return $this->belongsTo('App\Recinto', 'id_recinto', 'id_recinto');
     }
+
+    public function roles_persona(){
+        return $this->hasOne('\Caffeinated\Shinobi\Models\Role', 'id', 'id_rol');
+    }
 }
