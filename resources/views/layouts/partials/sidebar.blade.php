@@ -190,7 +190,7 @@
                 <ul class="treeview-menu">
                     <li><a href="{{ url('listado_votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Estado votación</span></a></li>
                     <li><a href="{{ url('votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Votación Presidenciales</span></a></li> 
-                    <li><a href="{{ url('porcentaje_votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Porcentaje Presidenciales</span></a></li> 
+                    {{-- <li><a href="{{ url('porcentaje_votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Porcentaje Presidenciales</span></a></li>  --}}
                     {{-- <li><a href="{{ url('form_resumen_global_por_distrito') }}"><i class='fa fa-bar-chart'></i> <span>Resumen Global </span></a></li>  --}}
                     <li><a href="{{ url('votacion_general_uninominales') }}"><i class='fa fa-bar-chart'></i> <span>Votación Uninominales</span></a></li> 
                 </ul>
@@ -202,7 +202,7 @@
                 <ul class="treeview-menu">
                     <li><a href="{{ url('listado_votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Cómputo de Votos</span></a></li>
                     <li><a href="{{ url('votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Votación Presidenciales</span></a></li> 
-                    <li><a href="{{ url('porcentaje_votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Porcentaje Presidenciales</span></a></li> 
+                    {{-- <li><a href="{{ url('porcentaje_votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Porcentaje Presidenciales</span></a></li>  --}}
                     {{-- <li><a href="{{ url('form_resumen_global_por_distrito') }}"><i class='fa fa-bar-chart'></i> <span>Resumen Global </span></a></li>  --}}
                     <li><a href="{{ url('votacion_general_uninominales') }}"><i class='fa fa-bar-chart'></i> <span>Votación Uninominales</span></a></li> 
                 </ul>

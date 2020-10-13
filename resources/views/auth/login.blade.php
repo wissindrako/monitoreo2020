@@ -11,9 +11,9 @@
                       Registrar Votos
                  </a> --}}
 
-                  <a class="mybtn-social pull-right" href="{{ url('/form_consulta') }}">
+                  {{-- <a class="mybtn-social pull-right" href="{{ url('/form_consulta') }}">
                        ¿Eres delegado?
-                  </a>
+                  </a> --}}
                
                 </div>           
             
@@ -22,11 +22,11 @@
                     <div class="myform-top">
                         <div class="myform-top-left">
                          <img  src="{{ url('img/comunidad-ciudadana.png') }} " class="img-responsive logo" />
-                          <h3>Monitoreo Electoral</h3>
+                          <h3>Monitoreo Electoral 2020</h3>
                             <p>Digita tu usuario y contraseña:</p>
                         </div>
                         <div class="myform-top-right">
-                          <i class="fa fa-key"></i>
+                          <i class="fa fa-unlock-alt"></i>
                         </div>
                     </div>
 
@@ -43,7 +43,7 @@
                 </div>
                 @endif
                     <div class="myform-bottom">
-                      
+                      <br>
                       <form role="form" action="{{ url('/login') }}" method="post" >
                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="form-group">

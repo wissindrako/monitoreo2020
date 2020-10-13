@@ -43,21 +43,21 @@
 
                     <div id="div_notificacion_sol" class="myform-bottom">
                         <div class="box box-default" id="div_usuarios_encontrados">
-                            <div  style="background-color:#111111; text-align:center; color:white" class="box-header">
+                            <div  style="background-color:#138541; text-align:center; color:white" class="box-header">
                                 <h3 class="box-title"><b>Usuarios Encontrados</b></h3>
                             </div>
                             <div class="box-body table-responsive no-padding scrollable">
                                 <table class="table table-bordered" id="tabla_cedula">
                                     <thead>
                                     <tr>
-                                        <th style="background-color:#3c8dbc; text-align:center; color:white">Nombre</th>
-                                        <th style="background-color:#3c8dbc; text-align:center; color:white">Carnet</th>
-                                        <th style="background-color:#3c8dbc; text-align:center; color:white">Nacimiento</th>
-                                        <th style="background-color:#3c8dbc; text-align:center; color:white">Contacto</th>
-                                        {{-- <th style="background-color:#3c8dbc; text-align:center; color:white">Circ.</th>
-                                        <th style="background-color:#3c8dbc; text-align:center; color:white">Distrito</th> --}}
-                                        <th style="background-color:#3c8dbc; text-align:center; color:white">Recinto</th>
-                                        <th style="background-color:#3c8dbc; text-align:center; color:white">Rol</th>
+                                        <th style="background-color:#f58e20; text-align:center; color:white">Nombre</th>
+                                        <th style="background-color:#f58e20; text-align:center; color:white">Carnet</th>
+                                        <th style="background-color:#f58e20; text-align:center; color:white">Nacimiento</th>
+                                        <th style="background-color:#f58e20; text-align:center; color:white">Contacto</th>
+                                        {{-- <th style="background-color:#f58e20; text-align:center; color:white">Circ.</th>
+                                        <th style="background-color:#f58e20; text-align:center; color:white">Distrito</th> --}}
+                                        <th style="background-color:#f58e20; text-align:center; color:white">Recinto</th>
+                                        <th style="background-color:#f58e20; text-align:center; color:white">Rol</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -358,7 +358,7 @@
                             <div class="scrollable">
                                 <table class="table table-bordered table-striped scrollable" id="tabla_mesas_json">
                                 <thead>
-                                <tr  style="background-color:#3c8dbc; text-align:center">
+                                <tr  style="background-color:#f58e20; text-align:center">
                                     <th>#</th>
                                     <th>Código Mesa</th>
                                     <th>Nombre</th>
