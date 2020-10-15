@@ -42,7 +42,7 @@
                     <div id="div_notificacion_sol" class="myform-bottom">
 											<br>
                     	<form action="{{ url('registrar_asistencia') }}"  method="post" id="f_enviar_gastronomia" class="formentrada" >
-                        <button type="submit" class="mybtn" style="background-color: #60C28B;">Estoy presente</button>
+                        <button type="submit" class="mybtn" style="background-color: #138541;">Estoy presente</button>
                       </form>
 											<br><br><br>
 											<form action="{{ url('registrar_falta') }}"  method="post" id="f_enviar_gastronomia" class="formentrada" >
@@ -52,7 +52,7 @@
 	                                <input type="text" maxlength="250" name="observacion" placeholder="" class="form-control" required/>
 	                            </div>
 	                        </div>
-	                        <button type="submit" class="mybtn" style="background-color: #DF6469;">No podré asistir</button>
+	                        <button type="submit" class="mybtn" style="background-color: #ff0000;">No podré asistir</button>
 	                      </form>
 
                     </div>

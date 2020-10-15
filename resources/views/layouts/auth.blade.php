@@ -9,7 +9,7 @@
  
     <!-- CSS de Bootstrap -->
     <link rel="stylesheet" href="{{ url('css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ url('css/mycustom.css') }}">
+    <link rel="stylesheet" href="{{ url('css/mycustom-auth.css') }}">
     <link rel="stylesheet" href="{{ url('font-awesome/css/font-awesome.min.css') }}"> <!--Iconos--> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500" >
     

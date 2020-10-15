@@ -8,7 +8,7 @@
 @section('main-content')
 <section  id="contenido_principal">
 
-<div class="box box-primary">
+<div class="box box-success">
 		<div class="box-header">
 				<h3 class="box-title">Listado de Votacion por Distrito</h3>	
 				{{-- <h4 class="text-black" >NOMBRE: <b>{{$persona->nombre}} {{$persona->paterno}} {{$persona->materno}}</b></h4 class="text-black" >

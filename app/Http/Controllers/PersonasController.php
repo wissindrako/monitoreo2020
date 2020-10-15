@@ -41,7 +41,8 @@ class PersonasController extends Controller
         ->get();
 
         $roles = \DB::table('roles')
-        ->where('id', '>=', 15)
+        // ->where('id', '>=', 15)
+        ->where('nivel', '!=', 0)
         ->get();
 
         $casas =  \DB::table('casas_campana')
@@ -88,7 +89,8 @@ class PersonasController extends Controller
         ->get();
 
         $roles_listado = \DB::table('roles')
-        ->where('id', '>=', 15)
+        // ->where('id', '>=', 15)
+        ->where('nivel', '!=', 0)
         ->get();
 
         $casas_listado =  \DB::table('casas_campana')
@@ -167,7 +169,8 @@ class PersonasController extends Controller
             ->get();
     
             $roles = \DB::table('roles')
-            ->where('id', '>=', 15)
+            // ->where('id', '>=', 15)
+            ->where('nivel', '!=', 0)
             ->get();
     
             $casas =  \DB::table('casas_campana')
@@ -731,7 +734,8 @@ class PersonasController extends Controller
         ->get();
 
         $roles = \DB::table('roles')
-        ->where('id', '>=', 15)
+        // ->where('id', '>=', 15)
+        ->where('nivel', '!=', 0)
         ->get();
 
         $casas =  \DB::table('casas_campana')

@@ -43,6 +43,47 @@ class AsistenciasController extends Controller
           ->with("listas",$listas);
   }
 
+  public function lista_de_asistencia_distrito(Request $request){
+
+    //Obtenemos el usuario actual
+    $id_persona = Auth::user()->id_persona;
+    $usuario_recinto = \DB::table('users')
+                  ->join('personas', 'personas.id_persona', '=', 'users.id_persona')
+                  ->join('recintos', 'personas.id_recinto', '=', 'recintos.id_recinto')
+                  ->select('recintos.id_recinto')
+                  ->where('personas.id_persona', $id_persona)
+                  ->first();
+
+    //Tomamos todas las listas creadas
+    $listas = \DB::table('asistencia')
+    ->join('users', 'users.id', '=', 'asistencia.id_usuario')
+    ->leftjoin('personas', 'personas.id_persona', '=', 'users.id_persona')
+    ->leftjoin('recintos', 'personas.id_recinto', '=', 'recintos.id_recinto')
+    ->leftjoin('origen', 'origen.id_origen', '=', 'personas.id_origen')
+    ->leftjoin('sub_origen', 'sub_origen.id_sub_origen', '=', 'personas.id_sub_origen')
+    ->leftjoin('role_user', 'users.id', '=', 'role_user.user_id')
+    ->leftjoin('roles', 'role_user.role_id', '=', 'roles.id')
+    ->select('recintos.circunscripcion', 'recintos.distrito', 'recintos.zona', 'recintos.nombre as recinto', 'recintos.direccion as direccion_recinto', 'recintos.id_recinto',
+     'asistencia.asistencia', 'asistencia.detalle',
+             'users.name', 'users.email', 'users.password', 'personas.nombre as nombre_usuario', 'personas.paterno', 'personas.materno', 'personas.cedula_identidad',
+             'personas.complemento_cedula', 'personas.expedido', 'personas.telefono_celular', 'personas.telefono_referencia', 'personas.direccion as direccion_usuario',
+             'origen.origen', 'sub_origen.nombre as nombre_sub_origen', 'roles.description as rol')
+    ->where('asistencia.fecha', $request->fecha)
+    ->where('recintos.id_recinto', $usuario_recinto->id_recinto)
+    ->whereBetween('role_user.role_id', [21, 22]) //Roles [responsable_recinto, responsable_distrito]
+    ->orderBy('recintos.circunscripcion', 'ASC')
+    ->orderBy('recintos.distrito', 'ASC')
+    ->orderBy('recintos.zona', 'ASC')
+    ->orderBy('recintos.nombre', 'ASC')
+    ->orderBy('asistencia.asistencia', 'DESC')
+    ->orderBy('users.email', 'ASC')
+    ->get();
+    // dd($listas);
+    return view("listados.lista_de_asistencia_distrito")
+          ->with("listas",$listas)
+          ->with("fecha",$request->fecha);
+  }
+
   public function lista_de_asistencia_recinto(Request $request){
 
     //Obtenemos el usuario actual
@@ -71,6 +112,7 @@ class AsistenciasController extends Controller
     ->where('asistencia.fecha', $request->fecha)
     ->where('recintos.id_recinto', $usuario_recinto->id_recinto)
     ->whereBetween('role_user.role_id', [20, 21]) //Roles [responsable_mesa, ResponsableRecinto]
+    // ->orderBy('roles.nivel', 'ASC')
     ->orderBy('recintos.circunscripcion', 'ASC')
     ->orderBy('recintos.distrito', 'ASC')
     ->orderBy('recintos.zona', 'ASC')

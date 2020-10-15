@@ -10,7 +10,7 @@
 
 <div class="box box-success">
 		<div class="box-header">
-				<h3 class="box-title">Listas de Asitencia</h3>
+				<h3 class="box-title">Listas de Asitencia por Fecha</h3>
 
 		  <div class="box-tools">
 			{{-- <div class="input-group input-group-sm" style="width: 150px;">
@@ -44,17 +44,26 @@
 					<td>{{$count}}</td>
 					<td>{{$lista->fecha}}</td>
 					<td>{{$lista->detalle}}</td>
-					@role('responsable_recinto')
+
+					@role('admin')
 					<td>
-						<form action="{{ url('lista_de_asistencia_recinto') }}" method="post">
+						<form action="{{ url('lista_de_asistencia') }}" method="post">
 							<input type="hidden" name="fecha" value="{{ $lista->fecha }}">
 							<button type="submit" class="btn btn-default btn-xs"><i class="fa fa-fw fa-eye"></i> Revisar</button>
 						</form>
 					</td>
 					@endrole
-					@role('admin')
+					@role('responsable_distrito')
 					<td>
-						<form action="{{ url('lista_de_asistencia') }}" method="post">
+						<form action="{{ url('lista_de_asistencia_distrito') }}" method="post">
+							<input type="hidden" name="fecha" value="{{ $lista->fecha }}">
+							<button type="submit" class="btn btn-default btn-xs"><i class="fa fa-fw fa-eye"></i> Revisar</button>
+						</form>
+					</td>
+					@endrole
+					@role('responsable_recinto')
+					<td>
+						<form action="{{ url('lista_de_asistencia_recinto') }}" method="post">
 							<input type="hidden" name="fecha" value="{{ $lista->fecha }}">
 							<button type="submit" class="btn btn-default btn-xs"><i class="fa fa-fw fa-eye"></i> Revisar</button>
 						</form>

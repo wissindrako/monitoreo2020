@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   if (document.getElementById("clock")) {
     
-    var countDownDate = new Date("Oct 20, 2019 00:00:01").getTime();
+    var countDownDate = new Date("Oct 18, 2020 00:00:01").getTime();
 
     /* Update the count down every 1 second */
     var x = setInterval(function() {

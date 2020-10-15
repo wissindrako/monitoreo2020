@@ -23,6 +23,7 @@
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
+                
                 <!-- Messages: style can be found in dropdown.less-->
                 <li class="dropdown messages-menu">
                     <!-- Menu toggle button -->
@@ -44,13 +45,7 @@
                                         </div>
                                         <!-- Message title and timestamp -->
                                         <h3 style="background-color:#31a65a; text-align:center; color:white" id="clock"></h3>
-                                        {{-- <h4>
-                                            Faltan 
-                                            <H3><i class="fa fa-clock-o"></i> 5 mins</H3>
-                                        </h4> --}}
-                                        <!-- The message -->
-                                        {{-- <p>{{ trans('adminlte_lang::message.awesometheme') }}</p> --}}
-                                    {{-- </a> --}}
+
                                 </li><!-- end message -->
                             </ul><!-- /.menu -->
                         </li>
@@ -59,6 +54,7 @@
                 </li>
                 <!-- /.messages-menu -->
 {{-- {{dd($control_mesas_votacion)}} --}}
+                @role('super_admin')
                 @php
                     $inferior = 42.8;
                     $superior = 79.6;
@@ -68,9 +64,7 @@
 
                     foreach ($control_mesas_votacion as $key => $control) {
                         $porcentaje_votos= (100 * $control->validos) / $control->numero_votantes;
-                        // if ($porcentaje_votos < $inferior || $porcentaje_votos > $superior ) {
-                        //     $numero_mensajes++;
-                        // }
+
                         if ($porcentaje_votos < $inferior ) {
                             $mensajes_inferior++;
                         }
@@ -143,42 +137,8 @@
                             {{-- <li class="footer"><a href="#">{{ trans('adminlte_lang::message.viewall') }}</a></li> --}}
                         </ul>
                     </li>
+                @endrole
     
-                <!-- Tasks Menu -->
-                {{-- <li class="dropdown tasks-menu">
-                    <!-- Menu Toggle Button -->
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-flag-o"></i>
-                        <span class="label label-danger">9</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="header">{{ trans('adminlte_lang::message.tasks') }}</li>
-                        <li>
-                            <!-- Inner menu: contains the tasks -->
-                            <ul class="menu">
-                                <li><!-- Task item -->
-                                    <a href="#">
-                                        <!-- Task title and progress text -->
-                                        <h3>
-                                            {{ trans('adminlte_lang::message.tasks') }}
-                                            <small class="pull-right">20%</small>
-                                        </h3>
-                                        <!-- The progress bar -->
-                                        <div class="progress xs">
-                                            <!-- Change the css width attribute to simulate progress -->
-                                            <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                <span class="sr-only">20% {{ trans('adminlte_lang::message.complete') }}</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li><!-- end task item -->
-                            </ul>
-                        </li>
-                        <li class="footer">
-                            <a href="#">{{ trans('adminlte_lang::message.alltasks') }}</a>
-                        </li>
-                    </ul>
-                </li> --}}
                 @if (Auth::guest())
                     <li><a href="{{ url('/register') }}">{{ trans('adminlte_lang::message.register') }}</a></li>
                     <li><a href="{{ url('/login') }}">{{ trans('adminlte_lang::message.login') }}</a></li>
@@ -196,12 +156,6 @@
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
                             <li class="user-header">
-                                {{-- @foreach ($personas as $persona)
-                                @if ( $persona->ci == Auth::user()->ci)
-                                            <!-- Status -->
-                                    <p> {{ $persona->unidad }}</p>
-                                        @endif   
-                                @endforeach --}}
                                 <p>
                                     {{ Auth::user()->name }}
                                     <small><script>
@@ -212,22 +166,9 @@
                                 </p>
                             </li>
                             <!-- Menu Body -->
-                            {{-- <li class="user-body">
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">{{ trans('adminlte_lang::message.followers') }}</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">{{ trans('adminlte_lang::message.sales') }}</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">{{ trans('adminlte_lang::message.friends') }}</a>
-                                </div>
-                            </li> --}}
                             <!-- Menu Footer-->
                             <li class="user-footer">
-                                {{-- <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">{{ trans('adminlte_lang::message.profile') }}</a>
-                                </div> --}}
+
                                 <div class="">
 
                                    <a href="{{ url('/logout') }}"
@@ -239,18 +180,12 @@
                                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
-                                
-
                                 </div>
                             </li>
                         </ul>
                     </li>
                 @endif
 
-                <!-- Control Sidebar Toggle Button -->
-                {{-- <li>
-                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                </li> --}}
             </ul>
         </div>
     </nav>

@@ -83,7 +83,7 @@
 					<td>{{$lista->rol}}</td>
 					<td>{{$lista->nombre_usuario." ".$lista->paterno." ".$lista->materno}}</td>
 					<td>{{$lista->cedula_identidad." ".$lista->complemento_cedula." ".$lista->expedido}}</td>
-					<td>{{$lista->telefono_celular." - ".$lista->telefono_referencia}}</td>
+					<td><a href="tel:{{$lista->telefono_celular}}">{{$lista->telefono_celular}}</a> - <a href="tel:{{$lista->telefono_referencia}}">{{$lista->telefono_referencia}}</a></td>
 					<td>{{$lista->direccion_usuario}}</td>
 					<td>{{$lista->origen." - ".$lista->nombre_sub_origen}}</td>
 			@endforeach

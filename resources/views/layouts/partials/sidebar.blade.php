@@ -145,7 +145,7 @@
             <li class="treeview"><a href="{{ url('listado_votacion_circunscripcion') }}"><i class='fa fa-check-square-o'></i> Control de Distritos</a></li>
             @endcan
 
-            {{-- @can('ver_lista_asistencia')
+            @can('ver_lista_asistencia')
             <li class="treeview"><a href="{{ url('form_listas_de_asistencia') }}"><i class='fa fa-check-square-o'></i> Control de Asistencia</a></li>
             @endcan
 
@@ -156,24 +156,24 @@
                     @can('crear_lista_asistencia')
                     <li><a href="{{ url('form_agregar_lista_de_asistencia') }}">Crear lista de asistencia</a></li>
                     @endcan
-
+{{-- 
                     @can('crear_lista_asistencia')
                     <li><a href="{{ url('revisar_transportes_asistencia') }}">Asistencia Conductores (Hoy)</a></li>
-                    @endcan
+                    @endcan --}}
                 </ul>
             </li>
-            @endcan --}}
+            @endcan
 
             @can('como_llegar_a_mi_recinto')
             <li class="treeview">
                 <a href="{{ url('form_ver_recinto') }}"><i class='fa fa-map-o'></i> <span>Como llegar a mi Recinto</span> </a>
             </li>
             @endcan
-            {{-- @can('registrar_asistencia')
+            @can('registrar_asistencia')
             <li class="treeview">
                 <a href="{{ url('form_registrar_asistencia') }}"><i class='fa fa-calendar-check-o'></i> <span>Registrar mi asistencia</span> </a>
             </li>
-            @endcan --}}
+            @endcan
             @can('registrar_votos')
             <li class="treeview">
                 <a href="{{ url('form_votar_seleccionar_mesa') }}"><i class='fa fa-list-ol'></i> <span>Registrar votos</span> </a>
@@ -192,7 +192,7 @@
                     <li><a href="{{ url('votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Votación Presidenciales</span></a></li> 
                     {{-- <li><a href="{{ url('porcentaje_votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Porcentaje Presidenciales</span></a></li>  --}}
                     {{-- <li><a href="{{ url('form_resumen_global_por_distrito') }}"><i class='fa fa-bar-chart'></i> <span>Resumen Global </span></a></li>  --}}
-                    <li><a href="{{ url('votacion_general_uninominales') }}"><i class='fa fa-bar-chart'></i> <span>Votación Uninominales</span></a></li> 
+                    {{-- <li><a href="{{ url('votacion_general_uninominales') }}"><i class='fa fa-bar-chart'></i> <span>Votación Uninominales</span></a></li>  --}}
                 </ul>
             </li>
             @endrole
@@ -204,7 +204,7 @@
                     <li><a href="{{ url('votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Votación Presidenciales</span></a></li> 
                     {{-- <li><a href="{{ url('porcentaje_votacion_general') }}"><i class='fa fa-bar-chart'></i> <span>Porcentaje Presidenciales</span></a></li>  --}}
                     {{-- <li><a href="{{ url('form_resumen_global_por_distrito') }}"><i class='fa fa-bar-chart'></i> <span>Resumen Global </span></a></li>  --}}
-                    <li><a href="{{ url('votacion_general_uninominales') }}"><i class='fa fa-bar-chart'></i> <span>Votación Uninominales</span></a></li> 
+                    {{-- <li><a href="{{ url('votacion_general_uninominales') }}"><i class='fa fa-bar-chart'></i> <span>Votación Uninominales</span></a></li>  --}}
                 </ul>
             </li>
             @endrole

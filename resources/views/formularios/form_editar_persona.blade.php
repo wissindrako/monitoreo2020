@@ -54,7 +54,7 @@
                                     @endforeach
                                     @else
                                     @foreach ($roles as $rol)
-                                        @if ($rol->id >= 20 && $rol->id <= 22)
+                                        @if ($rol->id >= 15 && $rol->id <= 22)
                                         <option value={{$rol->slug}} {{ $persona->id_rol == $rol->id ? 'selected' : '' }}>{{$rol->description}}</option>                                                
                                         @endif
                                     @endforeach
